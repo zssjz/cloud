@@ -1,0 +1,20 @@
+server:
+  port: 8050
+
+spring:
+  application:
+    name: cloud-user
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: cloud-config
+      label: master
+      profile: dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka/
+
+

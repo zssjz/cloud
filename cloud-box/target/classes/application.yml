@@ -1,0 +1,16 @@
+server:
+  port: 8070
+
+spring:
+  application:
+    name: cloud-box
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka/
+
+feign:
+  hystrix:
+    enabled: true
+

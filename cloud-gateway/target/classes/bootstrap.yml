@@ -1,0 +1,20 @@
+server:
+  port: 8020
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: cloud-config
+      label: master
+      profile: dev
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka/
+
+

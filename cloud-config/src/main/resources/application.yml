@@ -1,0 +1,24 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          default-label: master
+          uri: https://github.com/zssjz/cloud-config.git
+          search-paths: /config
+          profile: dev
+          username:
+          password:
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka/
+
+info:
+  profile: default
